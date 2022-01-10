@@ -1,4 +1,4 @@
-FROM clefos:7
+FROM s390x/clefos:7
 
 MAINTAINER Red Hat OpenShift Performance and Scale
 
