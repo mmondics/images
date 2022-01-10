@@ -1,4 +1,4 @@
-FROM centos:8
+FROM clefos:7
 
 MAINTAINER Red Hat OpenShift Performance and Scale
 
