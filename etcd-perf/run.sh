@@ -11,7 +11,7 @@ fio --rw=write --ioengine=sync --fdatasync=1 --directory=/var/lib/etcd --size=22
 echo "--------------------------------------------------------------------------------------------------------------------------------------------------------"
 
 # Scrape the fio output for p99 of fsync in ns
-fsync=$(cat /tmp/fio.out | jq '.jobs[0].write.clat_ns.percentile["99.000000"]')
+fsync=$(cat /tmp/fio.out | jq '.jobs[0].sync.lat_ns.percentile["99.000000"]')
 echo "99th percentile of fsync is $fsync ns"
 
 # Compare against the recommended value
